@@ -1,0 +1,45 @@
+<section class="quiz-container js-quiz-main" id="quiz-grid" role="main">
+        <div class="current-score-container js-current-score">Your current score is:</div>
+        <div class="quiz-location-container js-quiz-location"><h2 id="score-text">1 0f 2<h2></div>
+        <div class="question-container">
+            <h1 class="question-title">Question:</h1>
+            <h2 id="question">How many beats per measure does the Bulerias have?</h2>
+        </div>
+        <div class="answer-container">
+            <form class="answers">
+                <fieldset class="answer-box">
+                    <div id="answer-group1">
+                        <label class="answer-option">
+                            <input type="radio" class="answer-button" id="answer1" value="The bulerias measure contains 12 beats"name="answer" required>
+                            <span>The bulerias measure contains 12 beats</span>
+                        </label>  
+                    </div>   
+                    <div id="answer-group2">
+                        <label class="answer-option">
+                            <input type="radio" class="answer-button" id="answer2" value="The bulerias measure contains 6 beats."name="answer" required>
+                            <span>The bulerias measure contains 6 beats.</span>
+                        </label>     
+                    </div>
+                    <div id="answer-group3">
+                        <label class="answer-option">
+                            <input type="radio" class="answer-button" id="answer3" value="The bulerias measure contains 8 beats." name="answer" required>
+                            <span>The bulerias measure contains 8 beats.</span>
+                        </label> 
+                    </div>    
+                    <div id="answer-group4">
+                        <label class="answer-option">
+                            <input type="radio" class="answer-button" id="answer4" value="The bulerias measure contains 6 and/or 12 beats, depending the lead up to the resoultion of the melody." name="answer" required>
+                            <span>The bulerias measure contains 6 and/or 12 beats, depending the lead up to the resoultion of the melody.</span>
+                        </label> 
+                    </div> 
+                    <button type="submit" class="submitButton">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <section id="results-page" class="js-results-page" role="main">
+        <h1>Here are your results!</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt voluptates quos reiciendis blanditiis, laudantium dicta.</p>
+        <div class="final-score js-final-score">Your score is:</div>    
+        <button class="startover" >Start Over</button>
+    </section>

@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark:#1A1F18;
+    --lightBrown:#9C8961;
+    --wine:#773839;
+    --light: #E6E0C8;
+    --darkBrown: #3E3C30;
+}
+
+.main { 
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/87/John_Singer_Sargent_-_El_Jaleo.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: cover;
+    background-size: stretch;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.submitButton, h1, span{
+    font-family: 'Abril Fatface', cursive;
+}
+
+h2, p {
+    font-family: 'Cherry Swash', cursive;
+}
+
+.final-score, .current-score-container, .quiz-location-container, label, {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Quiz Grid=====================================*/
+
+.quiz-container {
+    display: grid;
+    margin: auto;
+    padding: 25px 25px;
+    max-width: 750px;
+    min-width: 350px;
+    justify-content: center;
+    align-content: center;
+    opacity: .85;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .5fr 1fr 2fr;
+    grid-template-areas: 
+    "score location"
+    "question question"
+    "answer answer";
+}
+
+.current-score-container{
+    grid-area: score;
+    font-size: 25px;
+    color: var(--light);
+    text-align: center;
+    border-radius: 20px 0px 0px 0px;
+    background-color: var(--wine);
+    padding: 25px;
+}
+
+.quiz-location-container{
+    grid-area: location;
+    background-color: var(--light);
+    font-size: 20px;
+    color: var(--dark);
+    text-align: center;
+    border-radius: 0px 30px 0px 0px;
+    padding: 20px;
+}
+
+.question-container{
+    grid-area: question;
+    background-color: var(--lightBrown);
+    padding-top: 15px;
+}
+
+.answer-container{
+    grid-area: answer;
+    padding: 25px;
+    background-color: var(--lightBrown);
+    border-radius: 0px 0px 20px 20px;
+    
+}
+
+fieldset {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.question-title, #question{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.question-title {
+    color: var(--dark);
+    font-size: 60px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+    text-align: left;
+}
+
+#question {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: var(--dark);
+    text-align: justify;
+}
+
+/* test */
+label {
+	/* border: 1px solid rgba($font-color,.15); */
+	box-sizing: border-box;
+	display: grid;
+	height: 100%;
+	width: 100%;
+	padding: 10px 10px 30px 10px;
+	cursor: pointer;
+	opacity: 1;
+	transition: all .5s ease-in-out;
+}
+
+label:hover {
+    background-color: var(--darkBrown);
+    color: var(--light);
+}
+
+button {
+	height: 30px;
+	border: none;
+	background-color: var(--darkBrown);
+	color: var(--light);
+	text-transform: uppercase;
+	padding: 0 20px;
+	border-radius: 20px;
+    font-weight: 900;
+    font-size-adjust: inherit;
+	cursor: pointer;
+	margin: 20px 0;
+	transition: all .25s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--dark);
+    text-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+input[type="radio"] {
+	opacity: 0;
+	width: 0;
+    height: 0;
+}
+
+input[type="radio"]:active ~ label {
+    opacity: 1;
+}
+
+input[type="radio"]:checked ~ label {
+    opacity: 1;
+    border: 1px var(--dark);
+}
+
+/* start page===========*/
+#start-page{
+    display: block;
+    margin: auto;
+    padding: 45px 60px;
+    max-width: 650px;
+    min-width: 350px;
+    min-height: 650px;
+    background-color: var(--light);
+    justify-content: center;
+    align-content: top;
+    opacity: .85;
+    color: var(--darkBrown);
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: 2s;
+    border-radius: 20px;
+}
+
+#start-page h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#start-page p{
+    font-size: 22px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#start-page button{
+    width: 50%;
+    margin: 120px;
+}
+
+/* Results page==================*/
+
+#results-page{
+    display: block;
+    margin: auto;
+    padding: 45px 60px;
+    max-width: 650px;
+    min-width: 350px;
+    min-height: 650px;
+    background-color: var(--light);
+    justify-content: center;
+    align-content: top;
+    opacity: .85;
+    color: var(--darkBrown);
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition-duration: 2s;
+    border-radius: 20px;
+}
+
+
+#results-page h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#results-page p{
+    font-size: 22px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+#results-page button{
+    width: 50%;
+    margin: 120px;
+}
+
+.final-score{
+    font-size: 25px;
+    color: var(--light);
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--wine);
+    padding: 25px;
+}
