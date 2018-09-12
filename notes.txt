@@ -43,3 +43,6 @@
         <div class="final-score js-final-score">Your score is:</div>    
         <button class="startover" >Start Over</button>
     </section>
+
+    Picture for correct answer: http://i68.tinypic.com/11hxfdc.jpg
+    Picture for incorrect answer: http://i68.tinypic.com/2u6e3xe.jpg
