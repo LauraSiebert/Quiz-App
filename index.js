@@ -111,22 +111,23 @@ function renderQuizTemplate(correctAnswer, question, questionAnswer) {
     <div class="answer-container">
         <form class="answers">
             <fieldset class="answer-box">
-                <label class="answer-option">
-                    <input type="radio" class="answer-button" id="answer1" value=${question.ans1}name="answer">
-                    <span>${question.ans1}</span>
-                </label>  
-                <label class="answer-option">
-                    <input type="radio" class="answer-button" id="answer2" value=${question.ans2}name="answer">
-                    <span>${question.ans2}</span>
-                </label>                  
-                <label class="answer-option">
-                    <input type="radio" class="answer-button" id="answer3" value=${question.ans3} name="answer">
-                    <span>${question.ans3}</span>
-                </label> 
-                <label class="answer-option">
-                    <input type="radio" class="answer-button" id="answer4" value=${question.ans4} name="answer">
-                    <span>${question.ans4}</span>
-                </label> 
+                <legend>Answer Options for Flamenco Quiz</legend>
+                    <label class="answer-option">
+                        <input type="radio" class="answer-button" id="answer1" value=${question.ans1}name="answer">
+                        <span>${question.ans1}</span><br><br>
+                    </label>  
+                    <label class="answer-option">
+                        <input type="radio" class="answer-button" id="answer2" value=${question.ans2}name="answer">
+                        <span>${question.ans2}</span><br><br>
+                    </label>                  
+                    <label class="answer-option">
+                        <input type="radio" class="answer-button" id="answer3" value=${question.ans3} name="answer">
+                        <span>${question.ans3}</span><br><br>
+                    </label> 
+                    <label class="answer-option">
+                        <input type="radio" class="answer-button" id="answer4" value=${question.ans4} name="answer">
+                        <span>${question.ans4}</span><br><br>
+                    </label> 
             </fieldset>
             <button type="submit" class="submit-Button js-submit-button">Submit</button>
         </form>
@@ -174,15 +175,14 @@ function handleNextButton() {
     });
 }
 
-function handleRestartButton() {
-    $('.container').on('click', '.js-restart-button', function(event) {
-        questionPosition = 1;
-        correctAnswer = 0;
-        nextQuestion();
+function handleRestartButton () {
+    $('main').on('click', '#js-restart-button', function (event) {
+      location.reload();
     });
   }
 
-// Checks & Iterations =============================
+
+  // Checks & Iterations =============================
 
 function checkUserAnswer(answer) {
     return answer.text() === answers[questionPosition - 1] ? true : false
@@ -208,15 +208,6 @@ function renderResults(correctAnswer) {
   `);
 }
 
-function renderScore() {
-
-}
-
-function renderLocation() {
-
-}
-
-
 // Feedback handling ====================
 
 function correctAnswerFeedback() {
@@ -226,8 +217,8 @@ function correctAnswerFeedback() {
         <img src="http://i68.tinypic.com/11hxfdc.jpg" alt="Flamenco dancer saying 'Ole Tu'" id="correct-photo">
         <button class="js-next-button">Next</button>
     </div>
-</section>`);
-    iterateQuestions();
+    </section>`);
+    iterateAnswers();
 }
 
 function createIncorrectPage(questionPosition) {
@@ -244,6 +235,15 @@ function createIncorrectPage(questionPosition) {
 
 function incorrectAnswerFeedback() {
   $('.container').html(createIncorrectPage(questionPosition));
+}
+
+function createResultsPage(correctAnswer) {
+    $('#container').html(`
+      <section id="final-page">
+        <h2>Your final score is: ${correctAnswer} out of 10</h2>
+        <button id="js-restart-button">Play Again?</button>
+      </section>
+    `);
 }
 
 // Render Quiz in it's entirety ===========
