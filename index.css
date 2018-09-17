@@ -232,6 +232,7 @@ button:hover {
     max-width: 320px;
     margin-bottom: 25px;
     opacity: .75;
+    align-self: center;
 }
 
 #incorrect-photo {
@@ -323,4 +324,11 @@ span{
     }
 
     
+    #incorrect-photo {
+        max-width: 300px;
+        margin: 25px;
+        border-radius: 10px;
+        opacity: .65;
+    }
+
 }

@@ -196,16 +196,44 @@ function iterateAnswers() {
     correctAnswer++;
 }
 
-// Render information ==================
-function renderResults(correctAnswer) {
-    $('.container').html(`
-    <section id="final-page">
-        <div class="feedback-container">
-            <h2>Final Score: ${correctAnswer} out of 10</h2>
-            <button id="js-restart-button">Try Again?</button>
-        </div>
-    </section>
-  `);
+function renderResults(correctAnswer){
+    if (`${correctAnswer}` >= 10) {
+        $('.container').html(`
+        <section id="final-page">
+            <div class="feedback-container">
+                <h1>OLE!</h1>
+                <img src="https://media.giphy.com/media/Y4tW36ZIXAfRLisTwZ/giphy.gif" alt="Vintage flamenco duo animated gif" id="correct-photo">
+                <h2>You got ${correctAnswer} / 10</h2>
+                <p>You're ready to schedule your first tablao performance!</p>
+                <button id="js-restart-button">Restart Quiz</button>
+            </div>
+        </section>
+        `);
+    } else if (`${correctAnswer}` < 8 && `${correctAnswer}` >= 5) {
+        $('.container').html(`
+        <section id="final-page">
+            <div class="feedback-container">
+                <h1>Good Job!</h1>
+                <img src="https://media.giphy.com/media/Y4tW36ZIXAfRLisTwZ/giphy.gif" alt="Vintage flamenco duo animated gif" id="correct-photo">
+                <h2>You got ${correctAnswer} / 10</h2>
+                <p>Though you passed, you should shore up your structure and tablao knowledge and come back again to score higher! Either way, you are ready to start accompanying with palmas and jaleo, and participate in fin de fiesta!</p>
+                <button id="js-restart-button">Restart Quiz</button>
+            </div>
+        </section>
+        `);
+    } else {
+        $('.container').html(`
+        <section id="final-page">
+            <div class="feedback-container">
+                <h1>Stay Dedicated!</h1>
+                <img src="https://media.giphy.com/media/1m7pNrik7VA9q/giphy.gif" alt="Flamenco dancer with flowers being thrown at her." id="correct-photo">
+                <h2>You got ${correctAnswer} / 10</h2>
+                <p>Your interest in taking this quiz shows your respect and passion for the art of Flamenco! With that being said, you still need to study hard before heading to the tablao. It is recommended to work on Bulerias first. Once you have a solid structural understanding of a basic pataita, you can apply those principals to all other palos of flamenco. Good luck! </p>
+                <button id="js-restart-button">Restart Quiz</button>
+            </div>
+        </section>
+        `);
+    }
 }
 
 // Feedback handling ====================
