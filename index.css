@@ -27,13 +27,13 @@
 }
 
 .submit-Button,
-h1,
-span {
+h1 {
     font-family: 'Abril Fatface', cursive;
 }
 
 h2,
-p {
+p, 
+span {
     font-family: 'Cherry Swash', cursive;
 }
 
@@ -70,7 +70,7 @@ legend{
         "answer answer";
 }
 
-.current-score-container h2{
+.current-score-container{
     grid-area: score;
     font-size: 20px;
     color: var(--light);
@@ -80,7 +80,7 @@ legend{
     padding: 25px;
 }
 
-.quiz-location-container h2{
+.quiz-location-container {
     grid-area: location;
     background-color: var(--light);
     font-size: 20px;
@@ -88,6 +88,16 @@ legend{
     text-align: center;
     border-radius: 0px 20px 0px 0px;
     padding: 25px;
+}
+
+.quiz-location-container h2 {
+    font-size: 20px;
+    color: var(--dark);
+}
+
+.current-score-container h2{
+    font-size: 20px;
+    color: var(--light);
 }
 
 .question-container {
@@ -136,7 +146,6 @@ fieldset {
 }
 
 label {
-    /* border: 1px solid rgba($font-color,.15); */
     box-sizing: border-box;
     display: grid;
     height: 100%;
@@ -225,12 +234,12 @@ button:hover {
     padding: 25px, 25px;
     margin-bottom: 25px;
     text-align: center;
-    color: var(--darkBrown);
+    color: var(--dark);
 }
 
 #correct-photo {
-    max-width: 320px;
-    margin-bottom: 25px;
+    max-width: 225px;
+    margin: auto;
     opacity: .75;
     align-self: center;
 }
@@ -238,7 +247,7 @@ button:hover {
 #incorrect-photo {
     max-width: 400px;
     min-width: 320px;
-    margin: 25px;
+    margin: auto;
     border-radius: 10px;
     opacity: .65;
 }
@@ -246,6 +255,7 @@ button:hover {
 .feedback-container h2  {
     text-align: center;
     margin: 20px;
+    color: var(--dark);
 }
 
 .answer-option {
@@ -257,6 +267,12 @@ span{
     margin-left:15px;
     color: var(--dark)
 }
+
+.feedback-container p {
+    color: var(--dark);
+    text-align: justify;
+}
+
 /* Results page==================*/
 
 #results-page {

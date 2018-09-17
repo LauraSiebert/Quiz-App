@@ -197,7 +197,7 @@ function iterateAnswers() {
 }
 
 function renderResults(correctAnswer){
-    if (`${correctAnswer}` >= 10) {
+    if (`${correctAnswer}` >= 8) {
         $('.container').html(`
         <section id="final-page">
             <div class="feedback-container">
