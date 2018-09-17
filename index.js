@@ -102,8 +102,8 @@ let correctAnswer = 0;
 // Render Quiz Questions, Structure ===================
 function renderQuizTemplate(correctAnswer, question, questionAnswer) {
     return `<section class="quiz-container js-quiz-main" id="quiz-grid" role="main">
-    <div class="current-score-container js-current-score">Your current score is:<br>${correctAnswer}/${questionAnswer}</div>
-    <div class="quiz-location-container js-quiz-location"><h2 id="score-text">You are on question<br>${questionPosition} of 10<h2></div>
+    <div class="current-score-container js-current-score"><h2>Your current score is:<br>${correctAnswer}/${questionAnswer}</h2></div>
+    <div class="quiz-location-container js-quiz-location"><h2 id="score-text">You are on question<br>${questionPosition} of 10</h2></div>
     <div class="question-container">
         <h1 class="question-title">Question:</h1>
         <h2 id="question"> ${question.questionString}</h2>
@@ -113,19 +113,19 @@ function renderQuizTemplate(correctAnswer, question, questionAnswer) {
             <fieldset class="answer-box">
                 <legend>Answer Options for Flamenco Quiz</legend>
                     <label class="answer-option">
-                        <input type="radio" class="answer-button" id="answer1" value=${question.ans1}name="answer">
+                        <input type="radio" class="answer-button" id="answer1" value="${question.ans1}" name="answer">
                         <span>${question.ans1}</span><br><br>
                     </label>  
                     <label class="answer-option">
-                        <input type="radio" class="answer-button" id="answer2" value=${question.ans2}name="answer">
+                        <input type="radio" class="answer-button" id="answer2" value="${question.ans2}" name="answer">
                         <span>${question.ans2}</span><br><br>
                     </label>                  
                     <label class="answer-option">
-                        <input type="radio" class="answer-button" id="answer3" value=${question.ans3} name="answer">
+                        <input type="radio" class="answer-button" id="answer3" value="${question.ans3}"  name="answer">
                         <span>${question.ans3}</span><br><br>
                     </label> 
                     <label class="answer-option">
-                        <input type="radio" class="answer-button" id="answer4" value=${question.ans4} name="answer">
+                        <input type="radio" class="answer-button" id="answer4" value="${question.ans4}"  name="answer">
                         <span>${question.ans4}</span><br><br>
                     </label> 
             </fieldset>
