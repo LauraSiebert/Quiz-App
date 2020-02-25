@@ -242,7 +242,7 @@ function correctAnswerFeedback() {
     $('.container').html(`<section class="feedback-page" role="main">
     <div class="feedback-container">
         <h1>You Got it!</h1>
-        <img src="http://i68.tinypic.com/11hxfdc.jpg" alt="Flamenco dancer saying 'Ole Tu'" id="correct-photo">
+        <img src="https://media.giphy.com/media/Vz6JJENhgY92w/giphy.gif" alt="Flamenco dancer saying 'Ole Tu'" id="correct-photo">
         <button class="js-next-button">Next</button>
     </div>
     </section>`);
@@ -254,7 +254,7 @@ function createIncorrectPage(questionPosition) {
     <section class="feedback-page" role="main">
     <div class="feedback-container">
         <h1>Incorrect</h1>
-        <img src="http://i68.tinypic.com/2u6e3xe.jpg" alt="It's flamenco, not flamingo" id="incorrect-photo">
+        <img src="https://media.giphy.com/media/gFmlwMWSMhCXMccjU7/giphy.gif" alt="It's flamenco, not flamingo" id="incorrect-photo">
         <h2>The correct answer is "${answers[questionPosition - 1]}!"</h2>
         <button class="js-next-button">Next</button>
     </div>
